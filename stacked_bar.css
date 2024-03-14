@@ -2,3 +2,32 @@ head {
   margin : 0,
   text-align : center;
 }
+
+body {
+  
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>JupyterLab</title><meta name="viewport" content="width=device-width,initial-scale=1">   <script id="jupyter-config-data" type="application/json">{"allow_hidden_files": false, "appName": "JupyterLab", "appNamespace": "lab", "appSettingsDir": "/opt/tljh/user/share/jupyter/lab/settings", "appUrl": "/lab", "appVersion": "4.0.10", "baseUrl": "/user/tlhaksa1/", "buildAvailable": true, "buildCheck": true, "cacheFiles": false, "copyAbsolutePath": false, "devMode": false, "disabledExtensions": [], "exposeAppInBrowser": false, "extensionManager": {"can_install": true, "install_path": "/opt/tljh/user", "name": "PyPI"}, "extraLabextensionsPath": [], "federated_extensions": [{"extension": "./extension", "load": "static/remoteEntry.5cbb9d2323598fbda535.js", "name": "jupyterlab_pygments", "style": "./style"}, {"extension": "./extension", "load": "static/remoteEntry.70a4f7e7a0383740860d.js", "mimeExtension": "./mimeExtension", "name": "jupyterlab-plotly"}, {"extension": "./extension", "load": "static/remoteEntry.578f43c6b92febd63b6b.js", "name": "@voila-dashboards/jupyterlab-preview", "style": "./style"}, {"extension": "./extension", "load": "static/remoteEntry.a37e37c87d212fe85e13.js", "name": "@jupyter-widgets/jupyterlab-manager"}, {"extension": "./extension", "load": "static/remoteEntry.d56c2ad706b718770a9d.js", "name": "@jupyter-server/resource-usage", "style": "./style"}, {"extension": "./extension", "load": "static/remoteEntry.b2792fe643cae74ea824.js", "name": "@jupyter-notebook/lab-extension", "style": "./style"}], "fullAppUrl": "/user/tlhaksa1/lab", "fullLabextensionsUrl": "/user/tlhaksa1/lab/extensions", "fullLicensesUrl": "/user/tlhaksa1/lab/api/licenses", "fullListingsUrl": "/user/tlhaksa1/lab/api/listings", "fullMathjaxUrl": "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js", "fullSettingsUrl": "/user/tlhaksa1/lab/api/settings", "fullStaticUrl": "/user/tlhaksa1/static/lab", "fullThemesUrl": "/user/tlhaksa1/lab/api/themes", "fullTranslationsApiUrl": "/user/tlhaksa1/lab/api/translations", "fullTreeUrl": "/user/tlhaksa1/lab/tree", "fullWorkspacesApiUrl": "/user/tlhaksa1/lab/api/workspaces", "hubHost": "", "hubPrefix": "/hub/", "hubServerName": "", "hubUser": "tlhaksa1", "ignorePlugins": [], "labextensionsPath": ["/home/jupyter-tlhaksa1/.local/share/jupyter/labextensions", "/opt/tljh/user/share/jupyter/labextensions", "/usr/local/share/jupyter/labextensions", "/usr/share/jupyter/labextensions"], "labextensionsUrl": "/lab/extensions", "licensesUrl": "/lab/api/licenses", "listingsUrl": "/lab/api/listings", "mathjaxConfig": "TeX-AMS_HTML-full,Safe", "mode": "multiple-document", "nbclassic_enabled": false, "news": {"disabled": false}, "notebookStartsKernel": true, "notebookVersion": "[2, 12, 4]", "preferredPath": "/", "quitButton": false, "rootUri": "file:///home/jupyter-tlhaksa1", "schemasDir": "/opt/tljh/user/share/jupyter/lab/schemas", "serverRoot": "/home/jupyter-tlhaksa1", "settingsUrl": "/lab/api/settings", "shareUrl": "/hub/user-redirect", "staticDir": "/opt/tljh/user/share/jupyter/lab/static", "store_id": 2, "templatesDir": "/opt/tljh/user/share/jupyter/lab/static", "terminalsAvailable": true, "themesDir": "/opt/tljh/user/share/jupyter/lab/themes", "themesUrl": "/lab/api/themes", "token": "QCaUQqiymqZXJXdWikxR9yD1AS0JoS", "translationsApiUrl": "/lab/api/translations", "treePath": "sandboxes/homework-5-tlhaksa1/stacked_bars.html", "treeUrl": "/lab/tree", "userSettingsDir": "/home/jupyter-tlhaksa1/.jupyter/lab/user-settings", "virtualDocumentsUri": "file:///home/jupyter-tlhaksa1/.virtual_documents", "workspace": "default", "workspacesApiUrl": "/lab/api/workspaces", "workspacesDir": "/home/jupyter-tlhaksa1/.jupyter/lab/workspaces", "wsUrl": ""}</script><link rel="icon" type="image/x-icon" href="/user/tlhaksa1/static/favicons/favicon.ico" class="idle favicon"><link rel="" type="image/x-icon" href="/user/tlhaksa1/static/favicons/favicon-busy-1.ico" class="busy favicon"><script defer="defer" src="/user/tlhaksa1/static/lab/main.039aa7b0f080e199f2bc.js?v=039aa7b0f080e199f2bc"></script></head><body><script>/* Remove token from URL. */
+  (function () {
+    var location = window.location;
+    var search = location.search;
+
+    // If there is no query string, bail.
+    if (search.length <= 1) {
+      return;
+    }
+
+    // Rebuild the query string without the `token`.
+    var query = '?' + search.slice(1).split('&')
+      .filter(function (param) { return param.split('=')[0] !== 'token'; })
+      .join('&');
+
+    // Rebuild the URL with the new query string.
+    var url = location.origin + location.pathname +
+      (query !== '?' ? query : '') + location.hash;
+
+    if (url === location.href) {
+      return;
+    }
+
+    window.history.replaceState({ }, '', url);
+  })();</script></body></html>
+  }
