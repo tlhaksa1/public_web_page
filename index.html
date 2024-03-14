@@ -10,3 +10,33 @@
         <CODE> CODE </CODE>
     </BODY>
 </HTML>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDP by Country</title>
+    <link rel = "stacked_bar" href="stacked_bar.css">
+    <!-- Add Plotly CDN for rendering plots -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>International Monetary Fund (IMF) Forecast</h1>
+
+    <!-- Add a container for the Plotly figure -->
+    <div id="plotly-figure"></div>
+
+    <script>
+        // JavaScript code to render Plotly figure
+        // Load Plotly figure from the HTML file
+        fetch('stacked_bars.html')
+            .then(response => response.text())
+            .then(html => {
+                // Display the Plotly figure in the container
+                document.getElementById('plotly-figure').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+    </script>
+</body>
+</html>
