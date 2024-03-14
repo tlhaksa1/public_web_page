@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>GDP by Country!</h1>
+<h1>GDP by Country</h1>
 import plotly.express as px
 
 # Plotting stacked bar of countries within regions using the IMF numbers
 fig = px.bar(gdp_imf, x = "Region", y = "Forecast", color = "Country", title='IMF Forecasted GDP by Country',
              labels={'Forecast': 'GDP (USD Million)', 'Region': 'UN Region', 'Country': 'Country'})
 fig.show()<p>IMF Forecast.</p>
+  
 </body>
 </html>
