@@ -1,44 +1,28 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDP by Country</title>
+    <!-- Add Plotly CDN for rendering plots -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <h1>International Monetary Fund (IMF) Forecast</h1>
 
-import plotly.express as px
-from jinja2 import Template
+    <!-- Add a container for the Plotly figure -->
+    <div id="plotly-figure"></div>
 
-# Convert IMF to long (unstack converts to tuple)
-page = 'IMF Forecasted GDP (USD in Millions)'
-y_imf = gdp[gdp['IMF_Forecast'] == page].drop(['IMF_Year','WoldBank_Estimate','WorldBank_Year','UN_Estimate','UN_Year'], axis=1).unstack()
-
-# Check
-print(imf[0:])
-y = np.asarray([10, 20, 30, 40, 50])
-y = y[1 : y.size] - y[0 : (y.size - 1)]
-print(y)
-    
-# Plot stacked bar of countries within regions using the IMF numbers
-fig = px.bar(imf, x = "Region", y = "Forecast", color = "Country", title='IMF Forecasted GDP by Country',
-             labels={'Forecast': 'GDP (USD Million)', 'Region': 'UN Region', 'Country': 'Country'})
-
-# Save the plot as an HTML file
-fig.write_html('stacked_bars.html')
-html_file = 'stacked_bars.html'
-
-# Convert the Plotly figure to an HTML string
-plot_html = {fig.to_html(full_html=False)}
-# consider also defining the include_plotlyjs parameter to point to an external Plotly.js as described above
-
-# Write the HTML string to an HTML file
-with open('stacked_bars.html', 'w') as f:
-    f.write(plot_html)
-
-with open(stacked_bars.html, "w", encoding="utf-8") as output_file:
-    with open(plot_html) as template_file:
-        j2_template = Template(template_file.read())
-        output_file.write(j2_template.render(plotly_jinja_data))
+    <script>
+        // JavaScript code to render Plotly figure
+        // Load Plotly figure from the HTML file
+        fetch('stacked_bars.html')
+            .then(response => response.text())
+            .then(html => {
+                // Display the Plotly figure in the container
+                document.getElementById('plotly-figure').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching HTML:', error));
+    </script>
 </body>
 </html>
